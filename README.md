@@ -1,27 +1,27 @@
 # TestI18nNg14
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+## Replicate error
 
-## Development server
+Just run: `npm run extract` and see:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```./dist/test/lib/fesm2020/test-lib.mjs - Error: Module build failed (from ./node_modules/@angular-devkit/build-angular/src/builders/extract-i18n/ivy-extract-loader.js):
+TypeError: Cannot create property 'message' on string 'dist\test\lib\fesm2020\test-lib.mjs: Unexpected messageParts for `$localize` (expected an array of strings).
+   8 | class LibModule {
+   9 |   static forRoot() {
+> 10 |     const dddd2 = $localize(_t || (_t = _`:Message defined placeholder:Message not present`));
+     |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  11 |     console.log("sssss", dddd2);
+  12 |     return {
+  13 |       ngModule: LibModule,'
+    at run (xxx\node_modules\@angular\localize\node_modules\@babel\core\lib\transformation\index.js:39:15)
+    at run.next (<anonymous>)
+    at transform (xxx\node_modules\@angular\localize\node_modules\@babel\core\lib\transform.js:25:41)
+    at transform.next (<anonymous>)
+    at evaluateSync (xxx\node_modules\gensync\index.js:251:28)
+    at sync (xxx\node_modules\gensync\index.js:89:14)
+    at MessageExtractor.extractMessages (file:///D:/Projects/daButtare/test_i18n_ng14/node_modules/@angular/localize/tools/bundles/chunk-CWHUJIHG.js:122:7)
+    at extract (xxx\node_modules\@angular-devkit\build-angular\src\builders\extract-i18n\ivy-extract-loader.js:123:32)
+```
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Make it works
+See file `.browserslistrc` and comment `not dead`
