@@ -1,0 +1,71 @@
+{
+  "$schema": "../projects/aulos/core/schemas/configuration-dto.json",
+  "projectInfo": {
+    "name": "Develop Aulos Web App",
+    "configuration": "develop",
+    "version": "0.0.0"
+  },
+  "servers": [
+    {
+      "code": "default",
+      "baseUrl": "http://@localHostName:9000/webservice",
+      "wsBaseUrl": "ws://@localHostName:9000/webservice",
+      "_baseUrl": "http://aulos-pc02:12000/webservice",
+      "_wsBaseUrl": "ws://aulos-pc02:12000/webservice",
+      "_baseUrl": "http://172.17.84.124:10000/webservice/v1.0",
+      "_wsBaseUrl": "ws://172.17.84.124:10000/webservice/v1.0",
+      "baseUrl": "http://172.17.21.186:12000/webservice/v1.0",
+      "_wsBaseUrl": "ws://172.17.21.186:12001/webservice/v1.0",
+      "_baseUrl": "http://localhost:12000/webservice/v1.0",
+      "_wsBaseUrl": "ws://localhost:12000/webservice/v1.0",
+      "_baseUrl": "http://gl-tc-agent07:12025/webservice",
+      "_wsBaseUrl": "ws://gl-tc-agent07:12025/webservice",
+      "_baseUrl": "http://gl-kitelab:12000/webservice/v1.0",
+      "baseAu": "SH1",
+      "services": {
+        "navigation": {
+          "baseUrl": "http://localhost:9000/webservice"
+        },
+        "system": {
+          "pollingInterval": 2000
+        },
+        "security": {
+          "autoLogin": true,
+          "defaultCredential": {
+            "username": "GL",
+            "password": "GL"
+          }
+        },
+        "messages": {
+          "showWarnings": true,
+          "editableTroubleshoot": true,
+          "notificationHideTime": 500
+        }
+      }
+    }
+  ],
+  "globalization": {
+    "cultures": {
+      "it-IT": {
+        "localeId": "it",
+        "path": "/it",
+        "label": "IT"
+      },
+      "en-GB": {
+        "localeId": "en-GB",
+        "path": "/en-GB",
+        "label": "EN"
+      }
+    },
+    "defaultCulture": "en-GB",
+    "storeMissingKeys": true,
+    "showLanguageSelector": true
+  },
+  "ux": {
+    "hideDebounceTime": 250,
+    "showContainersTitle": true
+  },
+  "experimental": {
+    "ngZoneEventCoalescing": true
+  }
+}
